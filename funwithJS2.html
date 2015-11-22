@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Fancy HTML5 Boilerplate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles.css"/>
+
+    <script src="js/modernizr.js"></script>
+
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <img id="pic" src="imgs/logo_PCT.png" onmouseover="changeImage()" onmouseleave="changeImage()" style="cursor:pointer;" style="width:100px;height:132px;"/>
+    </br>
+    <button onclick="changeImage()" ondblclick="widthAlert()">Click Me</button>
+
+    <h3>This example calls a function which performs a calculation, and returns the result:</h3>
+
+    <p id="demo"></p>
+
+    <h3>This example calls a function to convert from Fahrenheit to Celsius:</h3>
+
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+
+    <h3>Creating a JavaScript Object.</h3>
+
+    <p id="demo4"></p>
+
+    <p id="demo5"></p>
+
+    <h3>Multiply Numbers</h3>
+
+    <p id="demo6"></p>
+
+    <button onclick="this.innerHTML = Date()">Click Me for today's date!</button>
+
+    <p id="demo7"></p>
+
+    <button onclick="displayDate()">Click Me for today's date too!</button>
+
+    <p id="demo8"></p>
+
+    <span onmouseover="this.style.color='red', this.style.cursor='pointer'" onmouseleave="this.style.color='black'" >Mouse over to change color</span>
+
+    </br>
+
+    <span id="blue" onclick="colorChange()">Click to change color too</span>
+
+    </br>
+
+    <button onclick="search()" ondblclick="replace()">Search/Replace Text String</button>
+
+    <p id="demo9"></p>
+
+    <p id="demo10"></p>
+
+    <p id="demo11"></p>
+
+    <p id="demo12"></p>
+
+    <p id="footer"></p>
+
+    <p>Click the button to display the date.</p>
+<button onclick="displayDate()">The time is?</button>
+<p id="demo13"></p>
+
+<script>
+  function displayDate() {
+    document.getElementById("demo13").innerHTML = Date();
+}
+</script>
+
+    <script>
+      var today = new Date();
+      var year = today.getFullYear();
+
+      var est = new Date('May 15, 1977 08:15:23');
+      var diff = today.getTime() - est.getTime();
+      diff = (diff / 31556900000);
+
+      var elMsg = document.getElementById('footer');
+      elMsg.textContent = Math.floor(diff) + ' years of service!';
+    </script>
+
+    <script>
+      function search(){
+        var str = "If a wood chcuk could chuck woood, would you still eat woooood?";
+        var n = str.replace("woooood", "whacky tabacky");
+        document.getElementById("demo9").innerHTML = n;
+      }
+    </script>
+
+    <script>
+      function replace(){
+        var str = "super cali fragile listic, southern playa player listic";
+        var rep = str.replace(
+          /listic/gi,
+          function myFunction(x){return x.toUpperCase();}
+          );
+        document.getElementById("demo10").innerHTML = rep;
+      }
+    </script>
+
+    <script>
+
+      var myCar = function () {} ;
+
+      document.getElementById("demo11").innerHTML =
+
+        typeof "John Doe" + "</br>" +
+        typeof 3.2445 + "</br>" +
+        typeof NaN + "</br>" +
+        typeof false + "</br>" +
+        typeof [1, 2, 3, 4] + "</br>" +
+        typeof {name:'John', age:21} + "</br>" +
+        typeof new Date() + "</br>" +
+        typeof function () {} + "</br>" +
+        typeof myCar + "</br>" +
+        typeof null;
+
+    </script>
+
+    <script>
+      var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor:"blue"
+      };
+      delete person.firstName;
+      document.getElementById("demo12").innerHTML = person.firstName + " is " +
+      person.age + " years old."
+    </script>
+
+    <script>
+      function colorChange(){
+        document.getElementById("blue").style.color = "blue";
+        document.getElementById("blue").style.backgroundColor = "black";
+        document.getElementById("blue").style.height = "400px";
+        document.getElementById("blue").style.width = "400px";
+        document.getElementById("blue").style.fontSize = "4em";
+      }
+    </script>
+
+    <script>
+      function widthAlert(){
+      alert(document.getElementById("pic").style.height);
+      }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/app.js"></script>
+
+    <script>
+      function myFunction(a, b){
+        return a * b;
+      }
+      document.getElementById("demo").innerHTML = myFunction(10, 10);
+    </script>
+
+    <script>
+      function toCelsius(f) {
+        return (5/9) * (f - 32);
+      }
+      document.getElementById("demo2").innerHTML = toCelsius(68);
+    </script>
+
+    <script>
+      document.getElementById("demo3").innerHTML =
+        "The temp is " + toCelsius(68) + " Centigrade";
+
+      function toCelsius(f) {
+        return (5/9) * (f - 32);
+      }
+    </script>
+
+    <script>
+      var car = {type:"Fiat", model:500, color:"white"};
+      document.getElementById("demo4").innerHTML = car.color + " " + car.type;
+    </script>
+
+    <script>
+      var person = {
+          firstName : "John",
+          lastName  : "Doe",
+          age       : 50,
+          eyeColor  : "Blue",
+          fullName  : function(){
+            return this.firstName + " " + this.lastName;
+          }
+        };
+      document.getElementById("demo5").innerHTML = person.fullName() + " is " + person.age + " years old."
+    </script>
+
+    <script>
+      var newsrc = "logo_PCT.png";
+
+      function changeImage(){
+        if ( newsrc == "logo_PCT.png" ){
+          document.images["pic"].src = "imgs/logo_PCTBW.png";
+          newsrc = "logo_PCTBW.png";
+        }
+        else{
+          document.images["pic"].src = "imgs/logo_PCT.png";
+          newsrc = "logo_PCT.png";
+        }
+      }
+    </script>
+
+    <script>
+
+      function myAddFunction(a, b){
+        return a * b;
+      }
+      document.getElementById("demo6").innerHTML = myAddFunction(20, 4);
+
+    </script>
+
+    <script>
+      function displayDate(){
+        document.getElementById("demo8").innerHTML = Date();
+      }
+    </script>
+
+    // <script>
+    //   var longTextString = "jackinthehatisbataintthatwhackjackinblack?";
+    //   var x = longTextString.length;
+    //   alert(x);
+    // </script>
+
+    // <script>
+    //   var anotherTextString = "O say can you see, by the days early light";
+    //   var up = anotherTextString.toUpperCase();
+    //   alert(up);
+    // </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>
