@@ -1,0 +1,133 @@
+/* =============================================================== */
+/* ====================CELL PHONE MEDIA QUERIES=================== */
+/* =============================================================== */
+
+@media screen and (max-width:650px) {
+    .jagBreak{
+      background: none;
+    }
+    .topContact {
+      left: -21px;
+      font-size: .5em;
+      width: 340px;
+      float: left;
+    }
+    button, .button {
+      display: block;
+      font-size: 1.5rem;
+      margin: 10px auto;
+    }
+    h1 {
+      display: block;
+      width: 250px;
+      margin: 0px 6px 10px 0px;
+    }
+    h1 img {
+      width: 250px;
+    }
+    h2 {
+      display: block;
+      font-size: 1.25em;
+      margin: 0 0 0 -105px;
+      width: 300px;
+      padding: 0 0 0 10px;
+    }
+    #contact-form h2 {
+      width: 0px;
+    }
+    .topRow{
+      display: block;
+      width: 300px;
+      margin: 14px 0 0 0;
+      padding-left: 110px;
+    }
+    .repImg{
+      margin: 0 0 0 12px;
+    }
+    #tall1, #tall2 {
+      height: 590px;
+    }
+    #tall3 {
+      height: 550px;
+    }
+    .missionh3{
+    margin: 20px 0 10px 0;
+    font-size: 1.75em;
+    }
+    .missionP{
+        font-size: 1.35em;
+    }
+    .smlh2{
+      margin-left: 28px;
+      width: 200px;
+    }
+    .contact{
+      margin: 0;
+    }
+    #contact-form h2{
+      width: 260px;
+      font-size: 1.5em;
+      margin: 80px 0 20px -30px;
+    }
+    #contactP{
+      font-size: 1em;
+      text-align: left;
+      margin: -160px 35px 0 0px;
+      color: #fff;
+    }
+    #contact-form{
+      margin-top: 40px;
+    }
+    #form{
+      margin: 60px 0 0 0;
+    }
+    #req-field-desc{
+      width: 300px;
+      float: left;
+      margin: 30px -30px 40px 0;
+      text-align: left;
+      font-size: .8em;
+    }
+    .footer .footer-links a {
+      font-size: .3em;
+    }
+    .footer .footer-links a:nth-of-type(1) {
+      margin-left: -12px;
+    }
+    .backToTop{
+      margin: -190px 5px 25px 0;
+      font-size: .75em;
+    }
+    .footer .copywrite {
+      margin: 5px 30px 0 0;
+     }
+  }               /* END PHONE MEDIA QUERIES */
+
+/* =============================================================== */
+/* ======================IPAD MEDIA QUERIES======================= */
+/* =============================================================== */
+
+@media screen and (min-device-width:650px) and (max-device-width:1024px){
+    .topContact {
+      left: -50px;
+      font-size: 1.5em;
+      float: left;
+    }
+    button, .button {
+      font-size: 1.5rem;
+      margin: 60px auto;
+    }
+    button, .button:nth-of-type(2) {
+      margin-right: 120px;
+    }
+    h2 {
+      display: block;
+      font-size: 1em;
+      margin: 0 0 0 -165px;
+      padding: 0 0 0 20px;
+    }
+    .callout-card {
+      height:500px;
+    }
+
+}

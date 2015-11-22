@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,400italic' rel='stylesheet' type='text/css'>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+
+    <section class="topNav">
+      <h1><img src="imgs/logo400px.png" alt="Logo" class="headLogo" width="140"></h1>
+        <span class="icon-phone">
+        </span>
+          <nav>
+          <ul class="headNav">
+            <li>What We Offer<span class="icon-alarm navIcon"></span></li>
+            <li>Our Partners<span class="icon-users navIcon"></span></li>
+            <li>Contact Us<span class="icon-envelop navIcon navIconLast"></span></li>
+          </ul>
+        </nav>
+        <p class="phone">1-206-393-2653</p>
+    </section>
+
+    <ul data-orbit>
+      <li class="orbitLI"><img class="orbitLIimg" src="imgs/ClarkDrills.png" alt=""></li>
+      <li class="orbitLI"><img class="orbitLIimg" src="imgs/ClarkVariables.png"></li>
+    </ul>
+    <div class="wrap" id="wrap">
+
+
+<!--     <div class="row topDiv">
+      <div class="large-5 columns">
+
+      </div>
+      <div class="large-7 columns">
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns ctabody">
+          <div class="break"></div>
+          <h2>Providing superior quality, highly-effective and versatile tooling products.  We excel in <span class="dark">AOG tooling</span>, and would love to help, when you <br> <span class="dark">"need it yesterday!"</span></h2>
+          <img src="imgs/coatedTools.png" alt="" class="bodyBackImg">
+      </div>
+    </div> -->
+
+    <div class="row">
+      <div class="large-4 columns"><input type="text" size="30" placeholder="Enter Name" autocomplete="off"></div>
+      <div class="large-4 columns"><input type="email" placeholder="Enter Email" autocomplete="off"></div>
+      <div class="large-4 columns"><button type="submit" value="Submit" class="ctainput secondary">Submit Name and Email Now</button></div>
+    </div>
+
+    <div id="sticky-anchor"></div>
+    <div id="sticky">
+      <div class="row">
+        <div class="large-4 columns">What We Offer <span class="icon-alarm navIcon2"></span></div>
+        <div class="large-4 columns">Our Partners <span class="icon-users navIcon2"></span></div>
+        <div class="large-4 columns">Contact <span class="icon-envelop navIcon2 navIconLast"></span></div>
+      </div>
+    </div>
+
+    <div class="row offer">
+      <h2>What we offer:</h2>
+      <div class="large-4 columns offerIn">
+        <h3>Get</h3>
+      </div>
+      <div class="large-4 columns offerIn">
+        <h3>Got</h3>
+      </div>
+      <div class="large-4 columns offerIn">
+        <h3>Want</h3>
+      </div>
+    </div>
+
+    <div class="row partners">
+      <h2><span class="thin">Our</span> Partners:</h2>
+      <div class="large-6 columns"><img src="imgs/logo_PCT.png"></div>
+      <div class="large-6 columns"><img src="imgs/logo_ABTools.png"></div>
+    </div>
+
+    <section class="contactSect">
+
+      <h2><span class="thin">Contact</span> Us:</h2>
+
+           <!--Start Contact form -->
+          <form name="enq" method="post" action="email/" onsubmit="return validation();">
+
+          <fieldset>
+          <input type="text" name="name" id="name" value=""  class="input-block-level" placeholder="Name" />
+          <input type="text" name="email" id="email" value="" class="input-block-level" placeholder="Email" />
+          <textarea rows="11" name="message" id="message" class="input-block-level" placeholder="Comments"></textarea>
+          <div class="actions">
+          <input type="submit" value="Send Your Message" name="submit" id="submitButton" class="btn btn-info pull-right" title="Click here to submit your message!" />
+          </div>
+          </fieldset>
+
+          </form>
+          <!--End Contact form -->
+
+    </section>
+
+  </div><!--END SCROLL WRAP-->
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      function sticky_relocate() {
+          var window_top = $(window).scrollTop();
+          var div_top = $('#sticky-anchor').offset().top;
+          if (window_top > div_top) {
+              $('#sticky').addClass('stick');
+          } else {
+              $('#sticky').removeClass('stick');
+          }
+      }
+      $(function () {
+          $(window).scroll(sticky_relocate);
+          sticky_relocate();
+      });
+    </script>
+    <script>
+    $(document).foundation('section').foundation('orbit', {
+        animation: 'fade',
+        timer_speed: 3000,
+        animation_speed: 400,
+        stack_on_small: false,
+        navigation_arrows: false,
+        slide_number: false,
+        pause_on_hover: false,
+        resume_on_mouseout: false,
+        bullets: false,
+        timer: true,
+        variable_height: false,
+      });
+    </script>
+  </body>
+</html>

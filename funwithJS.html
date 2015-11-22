@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Test Page</title>
+  <meta name="description" content="The HTML5 Test Page">
+  <meta name="author" content="jMontoya">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style>
+    button{
+      margin: 10px 0 0 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <button type="button"
+  onclick="document.getElementById('demo').innerHTML = Date() ">Click me to display the current time!</button>
+
+  <p id="demo"></p>
+
+  <h2 id="jsSwitch">This is the date too: </h2>
+
+  <script src="js/scripts.js"></script>
+  <script type="text/javascript">
+
+  var newsrc = "logo_PCT.png";
+
+  function changeImage() {
+    if ( newsrc == "logo_PCT.png" ) {
+      document.images["pic"].src = "imgs/logo_PCTBW.png";
+      document.images["pic"].alt = "Mars";
+      newsrc  = "logo_PCTBW.png";
+    }
+    else {
+      document.images["pic"].src = "imgs/logo_PCT.png";
+      document.images["pic"].alt = "Earth";
+      newsrc  = "logo_PCT.png";
+    }
+  }
+
+    document.getElementById("jsSwitch").innerHTML = "Today's date is: ";
+
+    document.write(Date() + "</br></br>");
+
+    var stuff = new Array();
+
+    stuff[0] = 34;
+    stuff[1] = 22;
+    stuff[2] = 21;
+    stuff[3] = 44;
+    stuff[4] = 20;
+
+    document.write(stuff + "</br></br>");
+
+    var stuffToo = [0, 1, 3, 44, 23, 22];
+
+    document.write("\n" + stuffToo + "</br>");
+
+  for(i=1; i<=10; i++){
+    document.write(i + "</br>");
+  }
+
+  var shit = new Array();
+
+  shit[0] = "Jack ";
+  shit[1] = "Black ";
+  shit[2] = "is ";
+  shit[3] = "a ";
+  shit[4] = "quack ";
+  shit[5] = "whack!";
+  shit[6] = "</br>";
+
+  document.write(shit);
+
+
+  </script>
+
+  </br>
+  <img id="pic" src="imgs/logo_PCT.png" onmouseover="changeImage()" onmouseleave="changeImage()" style="cursor:pointer;"/>
+  </br>
+  <button onclick="changeImage()">Click Me</button>
+  </br>
+  </br>
+  <h1 oncopy="myCopyFunction()">Try copying this text!</h1>
+  <script type="text/javascript">
+
+
+    document.write("1 - 74 printed below " + "</br>" + "</br>");
+
+    var i = 0;
+
+    while(i<=74){
+      document.write(i + " ");
+      i++;
+    }
+
+    document.write("</br>" + "</br>");
+
+    var i = 20;
+
+    do
+    {document.write(i + "</br>");
+      i++;
+    }
+    while(i<=25);
+
+    function sayHello(name){
+      document.write("Hi, " + name + "</br>");
+    }
+    sayHello("Ceci");
+    sayHello("Jace");
+    sayHello("Montoya");
+
+    function myCopyFunction(){
+      alert("You tried to copy this text!")
+    }
+
+  </script>
+
+</body>
+</html>
